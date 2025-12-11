@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (0,1)
@@ -184,6 +188,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (0,2)
@@ -549,6 +557,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (2,0)
@@ -885,6 +897,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (2,2)
@@ -995,6 +1015,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (2,1)
@@ -1196,6 +1224,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (1,2)
@@ -1253,6 +1289,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (1,0)
@@ -1397,6 +1437,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5158759510206539301, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 565509132815750787, guid: 0bdb2751b727cbf4684947605c578679, type: 3}
       propertyPath: m_Name
       value: positioncollider (1,1)
