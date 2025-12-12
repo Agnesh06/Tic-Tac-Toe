@@ -1,5 +1,6 @@
 using System.Data;
 using UnityEngine;
+using Unity.Netcode;
 
 public class GameVisualManager : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class GameVisualManager : MonoBehaviour
     }
     private void GameManager_OnClickedOnGridPosition(object sender,GameManager.OnClickedOnGridPositionEventArgs e)
     {
-        Instantiate(crossprefab,GetGridWorldPosition(e.x,e.y),Quaternion.identity);
+        Transform SpawnedCrossTransform = Instantiate(crossprefab);
+        SpawnedCrossTransform.GetComponent<NetworkObject>().Spawn(true);
+        SpawnedCrossTransform.position = GetGridWorldPosition(e.x,e.y);
     }
     private Vector2 GetGridWorldPosition(int x ,int y)
     {
