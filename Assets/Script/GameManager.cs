@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Unity.Netcode;
+using Unity.VisualScripting;
 
 public class GameManager : NetworkBehaviour 
 {
@@ -12,6 +13,7 @@ public class GameManager : NetworkBehaviour
         public int y;
         public PlayerType PlayerType;
     }
+    public event EventHandler GameStarted;
 
     public enum PlayerType
     {
@@ -45,9 +47,19 @@ public class GameManager : NetworkBehaviour
         }
         if (IsServer)
         {
-            currentPlayableType = PlayerType.Cross;
+    
+            NetworkManager.Singleton.OnClientConnectedCallback += Network_OnClientConnectedCallback;
         }
     }
+
+    private void Network_OnClientConnectedCallback(ulong obj)
+    {
+        if(NetworkManager.Singleton.ConnectedClientsList.Count == 2){
+        GameStarted?.Invoke(this,EventArgs.Empty);
+        currentPlayableType = PlayerType.Cross;
+        }
+    }
+
     [Rpc(SendTo.Server)]
     public void ClickedOnGridPositionRpc(int x, int y,PlayerType playerType)
     {
@@ -76,5 +88,9 @@ public class GameManager : NetworkBehaviour
     public PlayerType GetLocalPlayerType()
     {
         return localPlayerType;
+    }
+    public PlayerType GetCurrentPlayerType()
+    {
+        return currentPlayableType;
     }
 }
