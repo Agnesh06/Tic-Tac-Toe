@@ -21,6 +21,7 @@ public class PALyer : MonoBehaviour
     public void Start()
     {
         GameManager.Instance.GameStarted+=Gamemanager_GameStarted;
+        GameManager.Instance.OnCurrentPlayablePlayerTypeChanged+=GameManger_OnCurrentPlayablePlayerTypeChanged;
         
     }
     public void Gamemanager_GameStarted(object sender,EventArgs s)
@@ -36,8 +37,10 @@ public class PALyer : MonoBehaviour
         }
         UpdateCurrentArrow();
     }
-    
-
+    public void GameManger_OnCurrentPlayablePlayerTypeChanged(object sender,EventArgs e)
+    {
+        UpdateCurrentArrow();
+    }
     private void UpdateCurrentArrow()
     {
         if(GameManager.Instance.GetCurrentPlayerType()== GameManager.PlayerType.Cross)
