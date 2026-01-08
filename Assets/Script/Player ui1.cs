@@ -1,10 +1,10 @@
-using System;
-using System.ComponentModel;
-using Unity.Networking.Transport.Error;
 using UnityEngine;
-
-public class PALyer : MonoBehaviour
+using Unity.Netcode;
+using System;
+using Unity.VisualScripting;
+public class Playerui1 : MonoBehaviour
 {
+
     [SerializeField] private GameObject crossyoutext;
     [SerializeField] private GameObject circleyoutext;
     [SerializeField] private GameObject crossarrow;
@@ -12,17 +12,23 @@ public class PALyer : MonoBehaviour
     
 
     private void Awake()
-    {
+    {   
+        GameManager.Instance.GameStarted+=Gamemanager_GameStarted;
+        GameManager.Instance.OnCurrentPlayablePlayerTypeChanged+=GameManger_OnCurrentPlayablePlayerTypeChanged;
         crossyoutext.SetActive(false);
         circleyoutext.SetActive(false);
         crossarrow.SetActive(false);
         circlearrow.SetActive(false);
+
     }
     public void Start()
     {
-        GameManager.Instance.GameStarted+=Gamemanager_GameStarted;
-        GameManager.Instance.OnCurrentPlayablePlayerTypeChanged+=GameManger_OnCurrentPlayablePlayerTypeChanged;
+
         
+    }
+    public void GameManger_OnCurrentPlayablePlayerTypeChanged(object sender,EventArgs e)
+    {
+        UpdateCurrentArrow();
     }
     public void Gamemanager_GameStarted(object sender,EventArgs s)
     {
@@ -33,14 +39,11 @@ public class PALyer : MonoBehaviour
         }
         else
         {
-            circleyoutext.SetActive(false);
+            circleyoutext.SetActive(true);
         }
         UpdateCurrentArrow();
     }
-    public void GameManger_OnCurrentPlayablePlayerTypeChanged(object sender,EventArgs e)
-    {
-        UpdateCurrentArrow();
-    }
+  
     private void UpdateCurrentArrow()
     {
         if(GameManager.Instance.GetCurrentPlayerType()== GameManager.PlayerType.Cross)
@@ -54,5 +57,4 @@ public class PALyer : MonoBehaviour
             circlearrow.SetActive(true);
         }
     }
-
 }
